@@ -9,11 +9,14 @@ if Pending_jobs<=49 :
 	print "OK - Running Jobs:",Running_jobs
 	sys.exit(0)
 elif Pending_jobs==50 :
-	print "WARNIN - Pending Jobs:",Pending_jobs
+	print "WARNING - Pending Jobs:",Pending_jobs
+	print "Running Jobs:",Running_jobs
 	sys.exit(1)
 elif Pending_jobs>=51 :
 	print "CRITICAL - Pending Jobs:",Pending_jobs
+	print "Running Jobs:",Running_jobs
 	sys.exit(2)
 else:
-	print "UKNOWN - Pending Jobs:",Pending_jobs
+	print "UNKNOWN - Pending Jobs:",Pending_jobs
+	print "Running Jobs:",Running_jobs
 	sys.exit(3)
