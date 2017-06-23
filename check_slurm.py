@@ -1,14 +1,9 @@
 #!/usr/bin/python
-
 import os,sys
-
 #PD_data ="squeue|tr -s " "|cut -f6 -d" "|grep PD|wc -l"
 #R_data ="squeue|tr -s " "|cut -f6 -d" "|grep R|wc -l"
-
 Pending_jobs = int(os.popen('squeue|tr -s " "|cut -f6 -d" "|grep PD|wc -l').read())
-
 Running_jobs = int(os.popen('squeue|tr -s " "|cut -f6 -d" "|grep R|wc -l').read())
-
 if Pending_jobs<=49 :
 	print "OK - Pending Jobs:",Pending_jobs
 	print "OK - Running Jobs:",Running_jobs
@@ -22,5 +17,3 @@ elif Pending_jobs>=51 :
 else:
 	print "UKNOWN - Pending Jobs:",Pending_jobs
 	sys.exit(3)
-
-
