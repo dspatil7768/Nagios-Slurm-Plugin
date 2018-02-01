@@ -1,2 +1,2 @@
 # Nagios-Slurm-Plugin
-Nagios plugin for slurm pending job status in python
+Nagios plugin for slurm pending job/Running job status in python
